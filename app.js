@@ -2,8 +2,11 @@ new p5();
 let canvas;
 let vid;
 let but;
+let w;
+let h;
 function setup(){
-     canvas=createCanvas(windowWidth, windowWidth/4*3);
+     h=(windowWidth/4)*3;
+     canvas=createCanvas(windowWidth, h);
      canvas.parent("canvas");
      background(0);
      vid=createVideo("https://res.cloudinary.com/dogev63ym/video/upload/v1593404550/index_cmqrpm.mp4");
@@ -24,7 +27,12 @@ function setup(){
          save("kaluSemina.png");         
      })
 
- 
+     fullscreen=createButton("Fullscreen");
+     fullscreen.mousePressed(function() {
+               console.log("hiii");
+               h=windowHeight;
+               canvas=createCanvas(windowWidth, h);
+     })
      
 }
 function draw(){
@@ -32,11 +40,3 @@ function draw(){
             
             
  }
-
- function mouseClicked() {
-       console.log("hiii")
-      let fs = fullscreen();
-      fullscreen(!fs);
-
-      return false;
-    }
