@@ -19,10 +19,12 @@ function setup(){
          vid.play();           
      })
 
-     screenshot=createButton("screenshot");
+     screenshot=createButton("Screenshot");
      screenshot.mousePressed(function(){
          save("kaluSemina.png");         
      })
+
+ 
      
 }
 function draw(){
@@ -30,3 +32,11 @@ function draw(){
             
             
  }
+
+ function mouseClicked() {
+       console.log("hiii")
+      let fs = fullscreen();
+      fullscreen(!fs);
+
+      return false;
+    }
