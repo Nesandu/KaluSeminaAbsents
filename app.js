@@ -5,7 +5,7 @@ function setup(){
      canvas=createCanvas(windowWidth, windowWidth/4*3);
      canvas.parent("canvas");
      background(0);
-     video=createVideo("https://www.youtube.com/embed/uMxVx2DLmq4");
+     video=createVideo("https://youtu.be/uMxVx2DLmq4");
      video.play();
      video.hide();
 }
