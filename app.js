@@ -1,12 +1,32 @@
 new p5();
 let canvas;
-let video;
+let vid;
+let but;
 function setup(){
      canvas=createCanvas(windowWidth, windowWidth/4*3);
      canvas.parent("canvas");
      background(0);
-     video=createImage("https://www.google.com/search?q=image&sxsrf=ALeKk01ZKJixL3nQUWLkrOCRz_wORNkaDQ:1593402977448&tbm=isch&source=iu&ictx=1&fir=3z9LIUs4ChzUOM%252ChrsXnpNgc3ZwMM%252C_&vet=1&usg=AI4_-kTte39BqlR0dNxrY4KNIZ22wyiq5A&sa=X&ved=2ahUKEwjHqdHTkKbqAhU87HMBHQvEDOYQ9QEwAnoECAoQIA#imgrc=3z9LIUs4ChzUOM");
+     vid=createVideo("https://res.cloudinary.com/dogev63ym/video/upload/v1593404550/index_cmqrpm.mp4");
+     vid.play();
+     vid.hide();
+     pause=createButton("Pause");
+     pause.mousePressed(function(){
+         vid.pause();           
+     })
+
+     play=createButton("Play");
+     play.mousePressed(function(){
+         vid.play();           
+     })
+
+     screenshot=createButton("screenshot");
+     screenshot.mousePressed(function(){
+         save("kaluSemina.png");         
+     })
+     
 }
 function draw(){
-      image(video,0,0,width,height);
-}
+            img=image(vid,0,0,width,height);
+            
+            
+ }
